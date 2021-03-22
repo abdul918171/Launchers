@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="launcher"
+            type="com.spacex.api.model.Launcher" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crdRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/crd_elevation_rv_row_launcher">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cnstRoot"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row_height"
+            android:padding="@dimen/common_pad_mar_rv_row_launcher">
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/common_pad_mar_rv_row_launcher"
+                android:text='@{launcher.name ?? ""}'
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/txt_title_text_size_rv_row_launcher"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/imgLauncher"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Rocket Name" />
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/pad_bottom_txt_date"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/txt_size_txt_date_rv_row_launcher"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtName"
+                tools:text="Date of launch" />
+
+
+            <!-- Loading image using the BindingAdapter -->
+            <ImageView
+                android:id="@+id/imgLauncher"
+                imageUrl="@{launcher.links.patch.small}"
+                android:layout_width="@dimen/width_height_img_launcher_rv_row_launcher"
+                android:layout_height="@dimen/width_height_img_launcher_rv_row_launcher"
+                android:layout_marginStart="@dimen/common_pad_mar_rv_row_launcher"
+                android:contentDescription="@string/content_description_launcher"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/txtDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="2"
+                android:text='@{launcher.details ?? ""}'
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/txt_description_text_size_rv_row_launcher"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/imgLauncher"
+                app:layout_constraintTop_toBottomOf="@+id/txtDate"
+                app:layout_constraintVertical_bias="0"
+                tools:text="SpaceX's 20th and final Crew Resupply Mission under the original NASA CRS contract, this mission brings essential supplies to the International Space Station using SpaceX's reusable Dragon spacecraft. It is the last scheduled flight of a Dragon 1 capsule. (CRS-21 and up under the new Commercial Resupply Services 2 contract will use Dragon 2.) The external payload for this mission is the Bartolomeo ISS external payload hosting platform. Falcon 9 and Dragon will launch from SLC-40, Cape Canaveral Air Force Station and the booster will land at LZ-1. The mission will be complete with return and recovery of the Dragon capsule and down cargo." />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

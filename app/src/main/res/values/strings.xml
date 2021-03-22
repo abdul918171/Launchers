@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SpaceX Launchers</string>
+    <string name="launchers_title">Launchers</string>
+    <string name="content_description_launcher">SpaceX Launchers</string>
+    <!-- Splash -->
+    <string name="splash_timer_error_msg" translatable="false">Something went wrong. Please try again later</string>
+</resources>

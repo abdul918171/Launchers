@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- fragment_splash -->
+    <dimen name="txt_app_name_text_size_fragment_splash">50sp</dimen>
+
+    <!-- rv_row_launcher -->
+    <dimen name="crd_elevation_rv_row_launcher">5dp</dimen>
+    <dimen name="common_pad_mar_rv_row_launcher">10dp</dimen>
+    <dimen name="txt_title_text_size_rv_row_launcher">20sp</dimen>
+    <dimen name="txt_description_text_size_rv_row_launcher">15sp</dimen>
+    <dimen name="row_height">120dp</dimen>
+    <dimen name="pad_bottom_txt_date">6dp</dimen>
+    <dimen name="txt_size_txt_date_rv_row_launcher">15sp</dimen>
+    <dimen name="width_height_img_launcher_rv_row_launcher">70dp</dimen>
+
+    <dimen name="rclr_decoration_ht_fragment_launchers">10dp</dimen>
+</resources>

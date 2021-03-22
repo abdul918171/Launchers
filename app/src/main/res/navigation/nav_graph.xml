@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.spacex.spacexlaunchers.fragment.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" />
+
+    <fragment
+        android:id="@+id/launchersFragment"
+        android:name="com.spacex.spacexlaunchers.fragment.LaunchersFragment"
+        android:label="fragment_launcher_list"
+        tools:layout="@layout/fragment_launchers" />
+
+    <fragment
+        android:id="@+id/launcherDetailsFragment"
+        android:name="com.spacex.spacexlaunchers.fragment.LauncherDetailsFragment"
+        android:label="fragment_launcher_details"
+        tools:layout="@layout/fragment_launcher_details" />
+
+    <action
+        android:id="@+id/action_splashFragment_to_launchersFragment"
+        app:destination="@id/launchersFragment"
+        app:popUpTo="@id/splashFragment"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_launchersFragment_to_launcherDetailsFragment"
+        app:destination="@id/launcherDetailsFragment"
+        app:popUpTo="@id/launchersFragment"
+        app:popUpToInclusive="true" />
+
+</navigation>
